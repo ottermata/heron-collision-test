@@ -18,13 +18,14 @@ fn main() {
         // this works?
         // .add_system(projectile_collision_check)
 
-        // these have no physics effect of the enemy (except sometimes?)
+        // these have no physics effect on the enemy (except sometimes?)
         // .add_system(projectile_collision_event)
         // .add_system(projectile_collide_check)
 
         // these have an effect, but don't despawn correctly
         .add_system_to_stage(CoreStage::PostUpdate, projectile_collision_event)
         // .add_system_to_stage(CoreStage::PostUpdate, projectile_collide_check)
+
         .run();
 }
 
